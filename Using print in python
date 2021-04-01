@@ -1,0 +1,6 @@
+print("Hong gildong")
+print("""123,  Ho, ABC, Street""")
+print("""Samsung-dong, Gamgnam-gu""")
+print("""Seoul, Korea""")
+
+//여러 문장을 나열 할 경우에는 따음표 세 개를 사용한다.

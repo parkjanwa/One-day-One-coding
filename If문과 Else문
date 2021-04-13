@@ -1,0 +1,22 @@
+my_speed = input("How fast are you going?")
+int_speed = int(my_speed)
+
+if int_speed <= 50:
+  print ("Go faster")
+else:
+  print("Slow down")
+  
+//입력받은 스피드에 따라 print달라짐
+
+
+print("What's the current temperature in C?")
+temp = input()
+
+temperature = int (temp)
+
+if temperature > 30:
+  print ("A bottle of cold water is 600 won.")
+else:
+  print("A bottle of cold water is 500 won.")
+  
+//보틀의 온도에 따라 print

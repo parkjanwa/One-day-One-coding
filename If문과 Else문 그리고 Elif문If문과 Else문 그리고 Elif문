@@ -1,0 +1,10 @@
+my_speed = input("How fasr are you going")
+int_speed = int (my_speed)
+
+if int_speed <= 50:
+  print("Go fater")
+elif int_speed >= 80:
+  print("Slow down")
+else:
+  print("Okey")
+  

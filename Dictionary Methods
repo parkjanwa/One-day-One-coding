@@ -1,0 +1,12 @@
+mydict = {'model' : 'Camaro', 'maker' : 'Chevrolet', 'year':2020}
+
+print(mydict.items())                                                    //[('model', 'Camaro'), ('maker', 'Chevrolet'), ('year', '2020')]
+print(mydict.keys())                                                     //['model', 'maker', 'year']
+print(mydict.values())                                                   //['Camaro', 'Chevrolet', '2020']
+
+newdict = mydict.copy()
+print(newdict)                                                           //{'model': 'Camaro', 'maker': 'Chevrolet', 'year': '2020'}
+print(mydict.get('model'))                                               //Camaro
+print(mydict.clear())                                                    //딕셔너리 클리어
+
+print(mydict)                                                            //{}  

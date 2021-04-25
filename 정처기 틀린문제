@@ -1,0 +1,11 @@
+class arr:
+  a = ["Seoul", "Kyeonggi", "Inchon", "Daejoen", "Deagu", "Pusan"]
+  str01 = ' '
+  for i in arr.a
+    str01 = str01 + i[0]
+  print(str01)
+  
+//SKIDDP
+
+
+

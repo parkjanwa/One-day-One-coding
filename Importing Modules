@@ -1,0 +1,18 @@
+from random import randint
+
+dice_toss = randint(1,6)
+print(dice_toss)                         //1과 6사이의 값을 랜덤으로 출력해줌
+
+form datetime import datetime
+
+current_time = datatime.now()
+c_year = current_time.year
+c_month = current_time.month
+c_day = current_time.day
+print(c_year)                            //2021
+print(c_month)                           //4
+print(c_day)                             //26
+
+
+
+

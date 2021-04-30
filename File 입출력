@@ -1,0 +1,27 @@
+test_list = [ 1, 2, 3, 4, 5, 6]
+f = open("test_list.txt", "w")
+
+for item in test_list:
+  f.write(str(item) + "\n")
+  print (str(item))
+  
+f.close()
+
+
+
+
+test_list = [1, 2, 3]
+f = open("test_list.txt", "w")
+
+for item in test_list:
+  f.write(str(item) + "\n")
+  
+fr = open("test_list.txt", "r")
+print fr.read()
+
+frp = open("test_list.txt", "a")
+frp.write(4)                              //w로 쓰면 1,2,3이 사라지지만 a로 쓰면 추가될 뿐이다.
+frp = open("test_list.txt", "r")
+print frp.read()                          // 1,2,3,4
+
+frp.close()

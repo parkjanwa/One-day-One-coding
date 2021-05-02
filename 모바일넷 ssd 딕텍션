@@ -1,0 +1,39 @@
+for image_path in IMAGE_PATHS:
+    print(f'Running inference for{image_path}...')
+    image_np = load_image_into_numpy_array(image_path) //IMAGE_PATH에서 가져온 오리지널 이미지 (탐지할 이미지)
+    
+input_tensor = tf.convert_to_tensor(image_np)                    //인풋 이미지를 tensor로 convert
+
+input_tensor = input_tensor[tf.newaxis, ...]
+
+detections = detect_fn(input_tensor)                             //convert된 인풋 이미지를 detection한다
+//detection 은 unm_detections, detection_boxes, detection_scores, detection_classes로 이루어진 딕셔너리이다.
+//unm_detections : 하나의 이미지 안에 있는 클래스의 수
+//detection_boxes : 감지 상자의 좌표
+//detection_scores : 박스 안에 있는 사물이 얼마나 확실한가의 백분율
+//detection_classes : 가져온 카테고리의 번호
+    
+num_detections = int(detections.pop('num_detections'))
+print("Number of Objects in the image = ", num_detections)
+detections = {key: value[0, :num_detections].numpy() for key, value in detections.items()}
+
+detections['num_detections'] = num_detections
+print ("Number of Objects in the image = ", num_detections)
+print (detections.items())
+print (detections.keys())
+print ("Classes in the image are : ", detections['detection_classes'])
+
+detections['detection_classes'] = detections['detection_classes'].astype(np.int64) //float를 10진수 정수로 바꾼다
+
+
+//시각화하기
+viz_utils.visualize_boxes_and_labels_on_image_array(
+    image_np,
+    detections['detection_boxes'],
+    detections['detection_classes'],
+    detections['detection_scores'],
+    category_index,
+    use_normalized_coordinates = True,
+    max_boxes_to_draw = 200,
+    min_score_thresh = .30,
+    agnostic_mode = False)

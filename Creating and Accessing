@@ -1,0 +1,47 @@
+class Car(object):
+    def __init__(self, maker, color, style):
+        self.maker = maker
+        self.color = color
+        self.style = style
+
+    def brake(self):
+        print ("This is a {} with a good brake.".format(self.maker))
+
+    def mirror(self):
+        print ("This is {} style with no blind spot.".format(self.style))
+
+    def wiper(self):
+        print ("It is {} and comes with an excellent wiper.".format(self.color))
+
+
+mine = Car("Chevy", "dark blue", "cool")
+
+mine.brake()
+mine.mirror()
+mine.wiper()
+
+
+
+
+
+
+
+class Car(object):
+      def __init__(self, maker, color, style, oldie):
+            self.maker = maker
+            self.color = color
+            self.style = style
+            self.oldie = oldie
+
+      def description(self):
+             print ("This is a {1} {0} with {2} style.".format(self.maker,self.color,self.style))
+      def is_ok(self):
+            if not self.oldie:
+                  print ("It is definitely cool.")
+            else:
+                  print ("Your old man would love it.")
+
+truck_mine = Car("Chevy", "dark blue", "cool", False)
+
+truck_mine.description()
+truck_mine.is_ok()

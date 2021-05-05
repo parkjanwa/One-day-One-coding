@@ -1,0 +1,19 @@
+class Car(object):
+    def __init__(self, category, maker, year, color):
+        self.category = category
+        self.maker = maker
+        self.year = year
+        self.color = color
+
+    def display_mycar(self):
+        print ('MyCar: {}'.format(self.category))
+        print ('Maker: {}'.format(self.maker))
+        print ('Year: {}'.format(self.year))
+        print ('Color: {}'.format(self.color))
+
+class Truck(Car):
+    pass
+    #상속
+
+Truck_mine = Truck('Truck','Chevy', '2019', 'Red')
+Truck_mine.display_mycar()

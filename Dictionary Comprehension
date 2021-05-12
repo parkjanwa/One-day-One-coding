@@ -1,0 +1,41 @@
+cars = ['BMW', 'FORD', 'CHEVY', 'KIA']
+years = [2019, 2020, 2018, 2019]
+
+year_dict = {key: value for key, value in zip(cars, years)}
+
+print (year_dict)
+
+
+
+
+
+
+
+players = ['Curry', 'Harden', 'James', 'Davis', 'Jokic']
+positions =   ['PG', 'SG', 'SF', 'PF', 'C'] 
+
+mydict1 = {key: value for key, value in zip(players,positions)}
+print (mydict1)
+
+pitchers = ['Kim', 'Lee', 'Park', 'Choi']
+kim = [13,3,1.99]
+lee = [15,4,2.05]
+park = [16,8,2.65]
+choi = [18,11,2.45]
+
+mydict2 = {key: value for key, value in zip(pitchers, [kim,lee,park,choi])}
+print (mydict2)
+
+
+
+
+
+
+
+students = ['Kim', 'Lee', 'Park', 'Choi']
+kim = ['국어 92', '영어 78', '수학 88']
+lee = ['국어 89', '영어 88', '수학 72']
+park = ['국어 72', '영어 98', '수학 78']
+choi = ['국어 82', '영어 87', '수학 91']
+mydict3 = {key: value for key, value in zip(students, [kim,lee,park,choi])}
+print (mydict3)

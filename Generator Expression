@@ -1,0 +1,23 @@
+
+gen = (x**3 for x in range(6))
+
+# 아래에서는 처음 답 하나만 나오고 전체 레인지의 답이 나오지 않습니다.
+print (next(gen)) 
+# 한 줄을 더 입력하면 다음 것이 나옵니다.
+print (next(gen)) 
+# 역시 한 줄을 더 입력하면 다음 것이 나옵니다.
+print (next(gen))
+
+
+
+
+gen = (x**3 for x in range(6))
+
+# 5개 출력
+for i in range(5) :
+        a = next(gen)
+        print (a)
+
+# 하나 더 출력
+for a in gen :
+    print (a)

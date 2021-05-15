@@ -1,0 +1,25 @@
+print ("Hello World")
+print ('Hello World')
+# 둘 다 사용가능
+
+
+print ("Mary's cosmetics")
+# 중간에 작은 따옴표가 있을 때는 큰 따옴표를 쓴다.
+print ('"안녕하세요" 라고 말했다')
+# 중간에 큰 따옴표가 있을 때는 작은 따옴표를 쓴다.
+
+
+print ("안녕하세요.\n만나서\t반갑습니다")
+# \n은 줄바꿈, \t는 탭
+
+
+print ("naver", "kakao")
+# 띄어쓰기 상태로 둘 다 출력
+
+
+print ("naver", "kakao", sep = ";")
+# naver;kakao
+
+
+print ("first", end=""); print("second")
+# 줄 바꿈 없이 출력

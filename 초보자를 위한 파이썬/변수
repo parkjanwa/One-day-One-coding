@@ -1,0 +1,23 @@
+삼성전자 = 5000
+총평가금액 = 삼성전자 * 10
+print(총평가금액, type(총평가금액))
+
+s = "hello"
+t = "python"
+print(s+"!" , t)
+
+num_str = "720"
+num_int = int(num_str)
+print(num_int+1, type(num_int))
+
+num_int = 100
+num_str = str(num_int)
+print(num_str, type(num_str))
+
+num = "15.79"
+num_flo = float(num)
+print(num_flo, type(num_flo))
+
+월 = 48584
+총금액 = 월 * 36
+print(총금액)

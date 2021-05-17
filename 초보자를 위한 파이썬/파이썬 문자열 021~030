@@ -1,0 +1,32 @@
+letters = 'python'
+print(letters[0], letters[2])
+
+license_plate = "24가 2210"
+print(license_plate[-4:])
+
+string = "홀짝홀짝홀짝"
+print(string[::2])
+
+string2 = "PYTHON"
+print(string2[::-1])
+
+phone_number = "010-1111-2222"
+# replace 메서드를 사용하면 문자열을 일부를 치환
+phone_number2 = phone_number.replace("-", " ")
+phone_number3 = phone_number.replace("-", "")
+print(phone_number2)
+print(phone_number3)
+
+url = "http://sharebook.kr"
+# .을 기준으로 분리한 후 마지막 인덱싱
+url_split = url.split('.')
+print(url_split[-1])
+
+lang = "python"
+#lang[0] = "P"
+# 문자열은 수정 불가 : 오류
+
+string3 = 'asjgbgubuabefaaa'
+string3 = string3.replace("a", "A")
+#string3 변수에 다시 넣어주지 않으면 변환 안됨
+print(string3)

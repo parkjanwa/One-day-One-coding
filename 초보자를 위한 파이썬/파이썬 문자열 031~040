@@ -1,0 +1,34 @@
+print ("-" * 80)
+
+t1 = 'python'
+t2 = 'java'
+print(((t1 + " " + t2) + " ") * 4)
+
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+# 타입이 달라서 원래 이렇게 지정
+print("이름: %s 나이: %d" %(name1, age1))
+print("이름: %s 나이: %d" %(name2, age2))
+# format 이용해서 좀더 간편하게 사용
+print("이름: {} 나이: {}".format(name1, age1))
+print("이름: {} 나이: {}".format(name2, age2))
+# f-string을 사용해서 더욱더 간편하게 사용
+print(f"이름: {name1} 나이: {age1}")
+print(f"이름: {name2} 나이: {age2}")
+
+상장주식수 = "5,969,782,550"
+컴마제거 = 상장주식수.replace(",", "")
+정수형 = int(컴마제거)
+print(정수형)
+
+분기 = "2020/03(E) (IFRS연결)"
+print(분기[:7])
+
+data = "   삼성전자   "
+공백제거 = data.replace(" ", "")
+print(공백제거)
+# 공백제거 함수가 있넹
+data1 = data.strip()
+print(data1)

@@ -1,0 +1,26 @@
+ticker = "btc_krw"
+ticker1 = ticker.upper()
+print(ticker1)
+ticker2 = ticker1.lower()
+print(ticker2)
+
+hello = "hello"
+Hello = hello.capitalize()
+print(Hello)
+
+file_name = "2020_보고서.xlsx"
+file_name.endswith(("xlsx", "xls"))
+file_name.startswith("2020")
+
+a = "hello world"
+print(a.split())
+b = "btc_krw"
+print(b.split("_"))
+
+date = "2021-05-19"
+date2 = date.split("-")
+print("연도:{} 월:{} 일:{}".format(date2[0], date2[1], date2[2]))
+
+d = "1234    "
+d = d.rstrip()
+print(d)

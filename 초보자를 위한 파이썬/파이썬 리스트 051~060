@@ -1,0 +1,24 @@
+movie_rank = ["닥터스트레인지", "아이언맨", "토르"]
+movie_rank.append("배트맨")
+movie_rank.insert(1, "스파이더맨")
+del movie_rank[-1]
+print(movie_rank)
+
+
+lang1 = ["일", "이", "삼"]
+lang2 = ["사", "오", "육"]
+lang3 = lang2 + lang1
+print(lang3)
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8]
+print("max: ", max(nums))
+print("min: ", min(nums))
+
+num = [1, 2, 3, 4, 5]
+print(sum(num))
+
+cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "쏘세지", "라면", "팥빙수", "김치전"]
+print(len(cook))
+
+numss = [1, 2, 3, 4, 5]
+print(sum(numss)/len(numss))

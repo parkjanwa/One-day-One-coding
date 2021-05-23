@@ -1,0 +1,22 @@
+# 별 표현식
+scores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+*valid_score, a, b = scores
+print(valid_score)
+
+c, d, *valid_score2 = scores
+print(valid_score2)
+
+e, *valid_score3, f = scores
+print(valid_score3)
+
+
+
+ice = {"메로나":1000, "폴라포":1200, "빵빠레":1800}
+ice["죠스바"] = 1200
+ice["월드콘"] = 1500
+print(ice)
+print("메로나 가격", ice["메로나"])
+ice["메로나"] = 1300
+print("메로나 가격", ice["메로나"])
+del ice["메로나"]
+print(ice)

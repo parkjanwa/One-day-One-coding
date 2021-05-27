@@ -1,0 +1,71 @@
+#1
+user = input("입력")
+print(user * 2)
+
+
+#3
+num = input("숫자를 입력하시오: ")
+print(int(num) + 10)
+
+
+#4
+num2 = input("숫자를 입력하시오")
+if int(num2) % 2 == 0:
+    print("짝수")
+else :
+    print("홀수")
+
+
+#5
+num3 = input("숫자를 입력하시오: ")
+num4 = int(num3) + 20
+if num4 <= 255:
+    print(num4)
+else:
+    print(255)
+
+
+#6
+num5 = input("숫자를 입력하시오: ")
+num6 = int(num5) - 20
+if 0 <= num6 <= 255:
+    print(num6)
+elif num6 < 0:
+    print(0)
+else:
+    print(255)
+
+
+#7
+times = input("시간을 입력하시오: ")
+if times[-2:] == "00":
+    print("정각입니다.")
+else :
+    print("정각이 아닙니다.")
+
+
+#8
+fruit = ["사과", "포도", "홍시"]
+like_fruit = input("좋아하는 과일은? ")
+if like_fruit in fruit:
+    print("정답입니다.")
+else:
+    print("오답입니다.")
+
+
+#9
+weather = {"봄": "딸기", "여름": "토마토", "가을": "사과"}
+like_weather = input("제가 좋아하는 계절은: ")
+if like_weather in weather:
+    print("정답입니다.")
+else:
+    print("오답입니다.")
+
+
+#10
+weather2 = {"봄": "딸기", "여름": "토마토", "가을": "사과"}
+like_weather2 = input("제가 좋아하는 과일은: ")
+if like_weather2 in weather2.values():
+    print("정답입니다.")
+else:
+    print("오답입니다.")

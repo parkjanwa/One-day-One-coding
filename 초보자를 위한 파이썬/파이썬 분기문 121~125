@@ -1,0 +1,62 @@
+# 121 대소문자 변경하기
+abc = input("알파벳을 입력하시오: ")
+if abc.islower():
+    print(abc.upper())
+else:
+    print(abc.lower())
+
+
+
+#122 학점 매기기
+score = input("점수를 입력하시오: ")
+score = int(score)
+if score <= 20:
+    print("E")
+elif 20 < score < 41:
+    print("D")
+elif 40 < score < 61:
+    print("C")
+elif 60 < score < 81:
+    print("B")
+elif 80 < score < 101:
+    print("A")
+
+
+
+# 123 환율 계산하기
+환율 = {"달러": 1167, "엔": 1096, "유로": 1268, "위안": 171}
+money = input("입력: ")
+num, current = money.split()
+print (float(num) * 환율[current], "원")
+
+
+
+# 124 가장 큰 수 입력받아 출력하기
+num1 = input("input number1 : ")
+num2 = input("input number1 : ")
+num3 = input("input number1 : ")
+num1 = int(num1)
+num2 = int(num2)
+num3 = int(num3)
+
+if num1 > num2 and num1 > num3:
+    print(num1)
+elif num2 > num1 and num2 > num3:
+    print(num2)
+else:
+    print(num3)
+
+
+
+# 125 휴대폰 번호 입력받고 통신사 출력하기
+phone = input("전화번호 입력하시오: ")
+phone = phone.split()[0]
+if phone == "001":
+    com = "SKT"
+elif phone == "016":
+    com = "KT"
+elif phone == "019":
+    com = "LGU+"
+else:
+    com = "알 수 없음"
+print("당신은 {} 사용자 입니다".format(com))

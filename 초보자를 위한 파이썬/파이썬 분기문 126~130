@@ -1,0 +1,56 @@
+# 126 우편번호 받아서 지역 분류하기
+post_num = input("우편번호: ")
+post_num = post_num[:3]
+if post_num in ["010", "011", "012"]:
+    print("강북구")
+elif post_num in ["013", "014", "015"]:
+    print("도봉구")
+else:
+    print("노원구")
+
+
+# 127 주민등록번호 받아서 성별 분류하기
+id_num = input("주민등록번호: ")
+id_num = id_num.split()[1]
+if id_num[0] == '1' or id_num[0] == '3':
+    print ("남자")
+elif id_num[0] == '2' or id_num[0] == '4':
+    print("여자")
+else:
+    print("잘못입력하셨습니다.")
+
+
+# 128 주민등록번호 받아서 지역코드 출력하기
+id_num = input("주민등록번호: ")
+id_num = id_num.split()[1]
+id_num = int(id_num[1:3])
+if (0 <= id_num <= 8) :
+    print("서울입니다.")
+else:
+    print("서울이 아닙니다.")
+
+
+# 129 유효한 주민등록번호인지 확인하기
+id_num = input("주민등록번호: ")
+valid_num1 = (int(id_num[0])*2 + int(id_num[1])*3 + int(id_num[2])*4 + int(id_num[3])*5 + int(id_num[4])*6 + int(id_num[5])*7
+              + int(id_num[7])*8 + int(id_num[8])*9 + int(id_num[9])*2 + int(id_num[10])*3 + int(id_num[11])*4 + int(id_num[12])*5) % 11
+valid_num2 = 11 - valid_num1
+valid_num2 = str(valid_num2)
+if valid_num2[-1] == id_num[-1]:
+    print("유효한 주민등록번호 입니다.")
+else:
+    print("유효하지 않은 주민등록번호 입니다.")
+
+
+#130 시가 + 변동폭이 최고가 보다 높을 경우 "상승장", 그렇지 않은경우 "하락장" 문자열을 출력하라
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+
+변동폭 = float(btc['max_price']) - float(btc['min_price'])
+시가 = float(btc['opening_price'])
+최고가 = float(btc['max_price'])
+
+if (시가 + 변동폭) > 최고가:
+    print("상승장")
+else:
+    print("하락장")

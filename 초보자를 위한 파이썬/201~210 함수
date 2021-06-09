@@ -1,0 +1,23 @@
+# 201 "비트코인" 문자열을 화면에 출력하는 print_coin() 함수를 정의하라.
+# 202 201번에서 정의한 함수를 호출하라.
+# 203 201번에서 정의한 print_coin 함수를 8번호출하라.
+# def print_coin():
+#     print("비트코인")
+#
+# print_coin()
+#
+# for i in range(8):
+#     print_coin()
+
+
+# 204 "비트코인" 문자열을 100번 화면에 출력하는 print_coins() 함수를 정의하라.
+# def print_coins():
+#     for i in range(4):
+#         print("비트코인")
+# print_coins()
+
+
+# 205 함수가 정의되기 전에 먼저 호출되어서는 안된다.
+
+
+# 206 ~ 210 코드의 실행 결과를 예측하라.

@@ -1,31 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int main(){
-    int abc[26] = {0, };
-    char s[1000000] = {0, };
+    int i, j, max, result = 0, len;
+    char arr[1000000];
+    int cnt[26] = {0, };
+    int select = 0;
 
-    scanf("%s", s);
+    scanf("%s", arr);
+    len = strlen(arr);
 
-    int len = strlen(s);
-    for (int i = 0; i < len; i++) {
-        if (s[i] >= 'a' && s[i] <= 'z') s[i] -= 'a' - 'A';
-        abc[s[i] = 'A']++;
+    for (i = 'a'; i <= 'z'; i++){
+        for (j = 0; j < len; j++){
+            if (i == arr[j]) cnt[i - 'a']++;
+        }
     }
 
-    int max = 0;
-    for(int i = 0; i < 26; i++){
-        if(abc[max] < abc[i]) max = i;
+    for (i = 'A'; i <= 'Z'; i++){
+        for(j = 0; j < len; j++){
+            if(i == arr[j]) cnt[i - 'A']++;
+        }
     }
 
-    int check = 0;
-    for(int i = 0; i < 26; i++){
-        if(abc[max] == abc[i]) check++;
+    max = cnt[0];
+    for(i = 1; i < 26; i++){
+        if(max < cnt[i]){
+            max = cnt[i];
+            select = i;
+        }
+    }
+    
+    for(i = 0; i < 26; i++){
+        if (max == cnt[i]) result++;
     }
 
-    if(check == 1) printf("%c\n", max, + 'A');
-    else printf("?\n");
-
+    if(result > 1) printf("?\n");
+    else printf("%c", select+'A');
     return 0;
 }

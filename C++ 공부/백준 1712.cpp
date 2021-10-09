@@ -1,11 +1,17 @@
 #include <stdio.h>
 
 int main(){
-    int a, b, c;
+    long a, b, c;
+    int point = 0;
 
-    scanf("%d %d %d", &a, &b, &c);
+    scanf ("%ld %ld %ld", &a, &b, &c);
 
-    if (b > c) printf("-1");
-    else printf("%d", a/(c-b)+1);
+    if(c - b <= 0) point = -1;
+    
+    else {
+        point = a/(c-b);
+        point++;
+    }
+    printf("%d", point);
     return 0;
 }

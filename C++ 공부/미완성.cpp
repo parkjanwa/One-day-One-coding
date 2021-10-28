@@ -5,7 +5,7 @@ int main(){
     int arr[246913] = {0, };
 
     arr[0] = 1, arr[1] = 1;
-
+ 
     for(int j = 2; j < 246913 / j; j++){
         if (arr[j] == 1) continue;
         for(int i = j * j; i < 246913; i += j){
